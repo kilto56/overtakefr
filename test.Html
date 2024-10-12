@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste avec images personnalisées</title>
+    <style>
+        ul {
+            list-style-type: none; /* Retirer les puces par défaut */
+        }
+
+        ul li::before {
+            content: url('./ressources/images/logosite.png'); /* Chemin de l'image */
+            margin-right: 10px; /* Espace entre l'image et le texte */
+            vertical-align: middle; /* Aligner l'image avec le texte */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Liste avec des images personnalisées</h1>
+    <ul>
+        <li>Élément 1</li>
+        <li>Élément 2</li>
+        <li>Élément 3</li>
+    </ul>
+
+</body>
+</html>
+

@@ -1,0 +1,545 @@
+/* fonts imports */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* file imports */
+@import url("./animations.css");
+
+/* global styles */
+:root {
+    --font-title: "Protest Guerilla", sans-serif;
+    --font-text: "Raleway", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-text);
+    color: white;
+}
+
+p {
+    font-size: 20px;
+    text-indent: 2em each-line;
+}
+
+p::first-letter {
+    color: #8a51fe;
+    font-size: 1.2em;
+    font-weight: 110%;
+}
+
+body {
+    min-height: 100dvh;
+    background-image: url("../images/bgs/background.svg");
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.surlignage {
+    color: #8a51fe;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 1.2em;
+}
+
+/* header styles */
+header {
+    height: 85px;
+    background: transparent;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 85px;
+}
+
+.header-left img {
+    height: 50px;
+    cursor: pointer;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+}
+
+.header-right div {
+    height: 85px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+
+.header-right div:hover {
+    color: #8a51fe;
+    transition: all .3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* page style */
+
+.page-content {
+    padding-top: 130px;
+}
+
+.page-content .title {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.5);
+    user-select: none;
+}
+
+.page-content .title h1 {
+    font-size: 60px;
+    position: relative;
+    right: 20px;
+}
+
+.page-content .title h1 img {
+    height: 100px;
+    position: relative;
+    top: 20px;
+    right: -20px;
+}
+
+.page-content .title h1 span {
+    color: #8a51fe;
+}
+
+.page-content .title hr {
+    margin: 25px 0 25px 0;
+    width: 25%;
+}
+
+.page-content .title h2 {
+    z-index: 1;
+}
+
+.triangle1 {
+    height: 0;
+    width: 0;
+    border-top: 70px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 110px solid #8a51fe;
+    position: relative;
+    right: 25%;
+    top: 10px;
+    animation: 3s ease 0s infinite smoothmoove1;
+}
+
+.triangle1::before {
+    content: "";
+    height: 0;
+    width: 0;
+    display: inline-block;
+    border-top: 70px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 110px solid white;
+    z-index: -1;
+    position: absolute;
+    top: -70px;
+    left: -109px;
+    transform: scale(1.05);
+    filter: blur(5px);
+    opacity: .6;
+}
+
+.triangle2 {
+    height: 0;
+    width: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-right: 110px solid #8a51fe;
+    position: relative;
+    left: 26%;
+    top: -180px;
+    animation: 5s ease 0s infinite smoothmoove2;
+    transform: rotate(45deg);
+}
+
+.triangle2::before {
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-right: 110px solid white;
+    z-index: -1;
+    position: absolute;
+    top: -50px;
+    left: 0px;
+    transform: scale(1.05);
+    filter: blur(5px);
+    opacity: .6;
+}
+
+.button-scroll-down-container {
+    position: absolute;
+    top: 85dvh;
+    left: 0;
+    width: 100dvw;
+    display: grid;
+    place-items: center;
+}
+
+.scroll-down-button {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: 3.5s ease 0s running infinite upnunder;
+    transition: all ease .3s;
+}
+
+.scroll-down-button i {
+    color: #8a51fe;
+    font-size: 25px;
+    transition: all ease .3s;
+}
+
+.scroll-down-button:hover {
+    background-color: #8a51fe;
+    cursor: pointer;
+    transition: all ease .3s;
+    animation: 3.5s ease 0s paused infinite upnunder;
+}
+
+.scroll-down-button:hover i {
+    color: white;
+    transition: all ease .3s;
+}
+
+.scroll-down-button:active {
+    transform: scale(.9);
+}
+
+/*contenu de la page*/
+
+.content-container {
+    position: absolute;
+    top: 100dvh;
+    left: 0;
+    width: 100dvw;
+    padding-top: 40px;
+}
+
+/*accueil */
+.accueil {
+    padding: 20px;
+}
+
+.accueil h3, .equipes h3, .palmares h3,  .showmatchs h3 {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
+.accueil-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.accueil-content-2 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.accueil p {
+    text-align: justify;
+    padding: 10px;
+    display: inline;
+    width: 45%;
+}
+
+.accueil-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.accueil-image-container .image-container {
+    height: 250px;
+}
+.accueil-image-container div img {
+    height: 250px;
+    box-shadow: 0 0 10px #8a51fe;
+    border-radius: 25px;
+}
+
+.accueil-image-text {
+    padding: 5px 25px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 25px 25px;
+    position: relative;
+    bottom: 62px;
+    height: 48.4px;
+    width: 427px;
+    display: flex;
+    align-items: center;
+}
+
+.image-container-2 {
+    height: 200px;
+}
+
+.image-container-2 img {
+    height: 200px !important;
+    box-shadow: 0 0 10px #8a51fe;
+    border-radius: 25px;
+}
+
+.accueil-image-text-2 {
+    padding: 5px 25px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 25px 25px;
+    position: relative;
+    bottom: 62px;
+    height: 48.4px;
+    width: 372.383px;
+    display: flex;
+    align-items: center;
+}
+
+/* equipes */
+.equipes-content {
+    display: flex;
+    justify-items: space-around;
+    align-items: center;
+    padding: 20px;
+    width: 100dvw;
+}
+
+.logos-equipes-container, .noms-equipes-container, .jeux-equipes-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+}
+
+.logos-equipes {
+    height: 140px !important;
+    padding: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.noms-equipes-container {
+    width: 20%;
+}
+
+.noms-equipes {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jeux-equipes-container {
+    width: 47%;
+}
+
+.jeux-equipes {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jeux-equipes p, .noms-equipes p {
+    text-indent: 0em each-line;
+}
+
+.jeux-equipes p i {
+    transform: scale(.5);
+    padding: 2px;
+    color: #8a51fe;
+}
+
+#solary-desc {
+    margin-top: 20px;
+}
+
+#vita-desc {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.en-savoir-plus {
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.en-savoir-plus hr {
+    width: 70%;
+    margin: 0 0 20px 0;
+    opacity: 50%;
+}
+
+.en-savoir-plus p {
+    text-indent: 0em each-line;
+}
+
+.en-savoir-plus-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid white;
+    transition: all .3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -4px;
+        width: 2px;
+        height: 110%;
+        transform: rotate(20deg);
+        transition: all .3s ease;
+        background-color: white;
+    }
+    
+    &:hover {
+        color: #8a51fe;
+        border: #8a51fe 2px solid;
+        transition: all .3s ease;
+    }
+
+    &:hover:before {
+        transform: rotate(20deg) translate(130px, -45px);
+        transition: all .3s ease;
+        background-color: #8a51fe;
+    }
+
+    &:active {
+        transform: scale(.9);
+        transition: all ease .3s;
+    }
+}
+
+.palmares-container {
+    position: relative;
+    padding: 20px;
+}
+
+.palmares-container p {
+    padding: 10px;
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+}
+
+.palmares-container ul {
+    text-align: center;
+    list-style: none;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+
+.palmares-container ul li {
+    font-size: 20px;
+    font-style: italic;
+    height: 280px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ftn {
+    position: relative;
+
+    &:before {
+        z-index: -1;
+        content: url('../images/logo-jeux/ftn.png');
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 280px;
+        width: 100%;       
+        filter: invert(.5) sepia(1) saturate(10000%) hue-rotate(270deg) brightness(0.9) drop-shadow(0 0 10px #8a51fe);
+    }
+}
+
+#valo {
+    position: relative;
+
+    &:before {
+        z-index: -1;
+        content: url("../images/logo-jeux/valo.png");
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 280px;
+        width: 100%;       
+        filter: invert(.5) sepia(1) saturate(10000%) hue-rotate(270deg) brightness(0.9) drop-shadow(0 0 10px #8a51fe);
+    }
+}
+
+#rl {
+    position: relative;
+
+    &:before {
+        z-index: -1;
+        content: url("../images/logo-jeux/rl.png");
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 280px;
+        width: 100%;       
+        filter: invert(.5) sepia(1) saturate(10000%) hue-rotate(270deg) brightness(0.9) drop-shadow(0 0 10px #8a51fe);
+    }
+}
+
+#lol {
+    position: relative;
+
+    &:before {
+        z-index: -1;
+        content: url("../images/logo-jeux/lol.png");
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 280px;
+        width: inherit;       
+        filter: invert(.5) sepia(1) saturate(10000%) hue-rotate(270deg) brightness(0.9) drop-shadow(0 0 10px #8a51fe);
+    }
+}
