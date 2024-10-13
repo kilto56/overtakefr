@@ -4,7 +4,7 @@ import { query, queryAll } from "./shortcut.js";
 const navButtons = queryAll('.nav-button');
 const accueil = query('#accueil');
 const sections = [accueil, query("#equipes"), query('#palmares'), query('#showmatchs')];
-const lengths = [-60, -80, -80, 0]
+const lengths = [-60, -80, -80, -80]
 
 
 for (let i = 0; i < sections.length; i++) {

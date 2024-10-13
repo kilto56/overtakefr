@@ -315,7 +315,7 @@ footer {
 
 .avis {
     padding: 20px;
-    width: 50%;
+    width: 40%;
 }
 
 .avis h4 {
@@ -414,4 +414,72 @@ footer {
         transform: scale(.9);
         transition: all ease .3s;
     }
+}
+
+.avis-publics {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+    overflow: auto;
+    height: 511px;
+}
+
+.avis-public {
+    background: transparent;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 1.5px solid #8a51fe;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    margin: 10px 0;
+}
+
+.avis-public h3, .avis-public p {
+    font-size: .8em;
+    text-align: justify;
+}
+
+.avis-public h3 {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.avis-public p {
+    white-space: normal !important;
+}
+
+.description-avis {
+    color: white !important;
+}
+
+.infos-avis {
+    text-align: center !important;
+    text-indent: 0em each-line;
+}
+
+q {
+    quotes: "«" "»"; /* Guillemets français */
+    font-style: italic;
+    color: #8a51fe;
+
+    &::after {
+        float: right;
+        margin-bottom: 15px;
+    }
+}
+
+.date {
+    text-align: right !important;
+    font-size: .6em;
+    font-style: italic;
+    color: white;
+    text-indent: 0em each-line;
+}
+
+.date::first-letter {
+    color: white;
 }
