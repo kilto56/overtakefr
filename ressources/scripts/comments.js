@@ -65,4 +65,4 @@ const initComment = (name, email, title, description, datetime) => {
 };
 
 initComment("John Doe", "john.doe@mail.com", "Beau site!", "Je l'aime beaucoup !", "15/01/2022");
-initComment("Marc Bidôt", "mark.bidot@blablamail.com", "Très enrichissant de savoir tout ça !", "Vraiment bien de mettre cette facette de la France en évidence !", "21/01/204");
+initComment("Marc Bidôt", "mark.bidot@blablamail.com", "Très enrichissant de savoir tout ça !", "Vraiment bien de mettre cette facette de la France en évidence !", "21/01/2024");
