@@ -15,7 +15,12 @@ form.addEventListener("submit", (e) => {
     };
 
     if (inputs.name.checkValidity() && inputs.title.checkValidity() && inputs.description.checkValidity() && validEmail(inputs.email.value)) {
-        createComment(inputs.name.value, inputs.email.value, inputs.title.value, inputs.description.value)
+        createComment(inputs.name.value, inputs.email.value, inputs.title.value, inputs.description.value);
+        inputs.name.value = "";
+        inputs.email.value = "";
+        inputs.title.value = "";
+        inputs.description.value = "";
+        window.alert("Thanks for your feedback !\nMerci pour votre retour !");
     } else {
         window.alert("EN : Please enter a valid email.\nFR : Entrez un email valide s'il vous plaît.");
     };
