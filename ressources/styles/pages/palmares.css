@@ -1,0 +1,56 @@
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: #8a51fe;
+    margin: 40px;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+ul, ul li {
+    text-align: center;
+}
+
+.intro p {
+    text-align: center;
+    text-indent: 0em each-line;
+}
+
+.selector {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    border: solid 1px white;
+    padding: 20px;
+    overflow: hidden;
+
+    & p {
+        margin-bottom: 10px;
+    }
+}
+
+.selector-anim {
+    margin-bottom: 40px;
+    text-align: center;
+
+    & img {
+        height: 70px;
+        padding: 10px;
+        cursor: pointer;
+        filter: brightness(0) invert(1);
+        transition: all .3s ease;
+        
+        &:hover {
+            filter: brightness(0) invert(1) drop-shadow(0 0 5px #8a51fe);
+            transition: all.3s ease;
+        }
+    }
+}
