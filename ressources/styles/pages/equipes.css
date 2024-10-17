@@ -1,0 +1,93 @@
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro p {
+    align-items: center;
+}
+
+.anim-jeux-team {
+    width: 80%;
+    border: solid 1px white;
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.jeux {
+    height: 100px;
+}
+
+.jeux {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 1px;
+}
+
+.logo-jeux {
+    height: 100px !important;
+    width: 180px !important;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: solid .5px white;
+    border-left: solid .5px white;
+    border-bottom: 1px solid white;
+    transition: all .3s ease;
+    z-index: +1;
+
+    & img {
+        height: 65px;
+        filter: brightness(0) invert(1);
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover {
+            filter: brightness(0) invert(1) drop-shadow(0 0 5px #8a51fe);
+            transition: all .3s ease;
+        }
+    }
+}
+
+.selected-logo-jeux {
+    border-bottom: solid 1px #8a51fe;
+    
+    & img {
+        filter: brightness(0) invert(1) drop-shadow(0 0 5px #8a51fe);
+    }
+}
+
+.first-logo {
+    border-left: solid 0px white;
+}
+
+.last-logo {
+    border-right: solid 0px white;
+}
+
+#nba2k {
+    height: 45px;
+}
+
+.teams {
+    padding: 20px;
+}
+
+.teams img {
+    padding: 20px;
+    height: 100px;
+    filter: invert(.5) sepia(1) saturate(10000%) hue-rotate(270deg) brightness(0.9);
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+    transition: all .3s ease;
+}

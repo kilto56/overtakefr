@@ -8,20 +8,27 @@ const lengths = [-60, -80, -80, -80]
 
 
 for (let i = 0; i < sections.length; i++) {
-
     navButtons[i].addEventListener('click', () => {
-        sections[i].scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+        const locationRef = "index.html";
+        const loca = window.location.href;
 
-        setTimeout(() => {
-            window.scrollBy({
-                top: lengths[i], 
-                left: 0,
-                behavior: 'smooth'
+        if (loca.includes(locationRef)) {
+            sections[i].scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
-        }, 500);
+
+            setTimeout(() => {
+                window.scrollBy({
+                    top: lengths[i], 
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            }, 500);
+        } else {
+            const indexSections = ["index", "equipes", 'palmares', 'showmatchs'];
+            window.location.href = `${indexSections[i]}.html`;
+        };
     });
 };
 
